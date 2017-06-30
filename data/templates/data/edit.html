@@ -1,0 +1,12 @@
+{% extends "data/base.html" %}
+{% block pagecontent %}
+<form method="post" action="/update/{{book.id}}">
+    <!--to prevent cross-site voilation-->
+    {% csrf_token %}
+    <label>Language</label>
+    <input type="text" name="language" value="{{book.name}}">
+    <label>Code</label>
+    <input type="text" name="code" value="{{book.code}}">
+    <button type="submit">Update</button>
+</form>
+{% endblock %}

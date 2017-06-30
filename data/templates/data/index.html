@@ -1,0 +1,17 @@
+{% extends "data/base.html" %}
+{% block pagecontent %}
+<form method="post" action="create">
+    <!--to prevent cross-site voilation-->
+    {% csrf_token %}
+    <label>Language</label>
+    <input type="text" name="language">
+    <label>Code</label>
+    <input type="text" name="code">
+    <button type="submit">Add</button>
+</form>
+<ul>
+    {% for dat in data %}
+    <li>{{ dat.name }}|{{dat.code}} ||<a href="edit/{{dat.id}}">Upate</a> |<a href="delete/{{dat.id}}">Delete</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

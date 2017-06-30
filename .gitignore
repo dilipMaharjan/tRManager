@@ -1,0 +1,22 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+;; 2013.01.21
+;; yasushisakai
+;;
+;; gitignore for Django using pyCharm
+;;
+
+;;files to ignore
+settings.py
+
+;;extensions to ignore
+*.log
+*.pot
+*.pyc
