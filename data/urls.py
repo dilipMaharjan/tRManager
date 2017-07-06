@@ -8,6 +8,5 @@ urlpatterns = [
     url(r'^edit/(?P<id>\d+)$', views.edit),
     url(r'^update/(?P<id>\d+)$', views.update),
     url(r'^delete/(?P<id>\d+)$', views.delete),
-    url(r'^bookbyid$', views.book_by_id),
     url(r'^raw$', views.perform_raw_query),
 ]

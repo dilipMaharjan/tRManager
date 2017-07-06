@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.template import loader
 
-from data.models import Book, WavFile
+from data.models import Book
 
 
 def index(request):
@@ -71,10 +71,4 @@ def book_by_id(request):
 def perform_raw_query(request):
     # raw select all query
     book = Book.objects.raw('SELECT * from data_book')
-
-    for b in book:
-        print b.name
-
-    
-
-    return HttpResponse("ok")
+    return HttpResponse(book)
