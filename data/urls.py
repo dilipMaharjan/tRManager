@@ -1,5 +1,6 @@
 from django.conf.urls import url
 
+from api.views import PostListAPIView
 from data import views
 
 urlpatterns = [
